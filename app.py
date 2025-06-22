@@ -34,7 +34,6 @@ def predict():
             predicted_idx = outputs.argmax(1).item()
 
         # Use ImageNet labels
-        from torchvision.models import ResNet50_Weights
         labels = ResNet50_Weights.DEFAULT.meta["categories"]
         predicted_label = labels[predicted_idx]
 
