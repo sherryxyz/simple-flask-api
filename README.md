@@ -44,6 +44,8 @@ Uploads an image and returns the classification result.
 curl -X POST -F "file=@/path/to/your/image.jpg" http://127.0.0.1:5000/predict
 ```
 Replace /path/to/your/image.jpg with your actual image path.
+Replace the url if you host your app on a cloud platform.
+The current URL can only be used locally
 
 
 📌 Notes
