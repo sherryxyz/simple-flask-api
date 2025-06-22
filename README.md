@@ -1,2 +1,55 @@
-# simple-flask-api
-A minimal Flask REST API that simulates a prediction service, designed for learning how to structure, run, and expose APIs before adding real machine learning models.
+# 🐱🐶 🐾 Cat vs Dog Classifier API
+
+This is a lightweight Flask API that uses a pretrained **ResNet50** model from PyTorch to classify uploaded images as **cat**, **dog**, or **unknown**.
+
+---
+
+## 🔧 Features
+
+- Built with Flask
+- Accepts image upload via POST request
+- Uses `ResNet50` pretrained on ImageNet
+- Returns prediction result as JSON
+
+---
+
+## 🚀 Setup
+
+### 1. Create virtual environment (optional)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 2. Install dependencies
+```bash
+pip install flask torch torchvision pillow
+```
+or use requirements.txt
+
+### 3. Run the app
+python app.py
+
+The API will be available at:
+📍 http://127.0.0.1:5000
+
+
+### 📤 Endpoint
+POST /predict
+Uploads an image and returns the classification result.
+
+🔧 Example using curl:
+```bash
+curl -X POST -F "file=@/path/to/your/image.jpg" http://127.0.0.1:5000/predict
+```
+Replace /path/to/your/image.jpg with your actual image path.
+
+
+📌 Notes
+The model is a pretrained ResNet50 (ResNet50_Weights.DEFAULT) from PyTorch.
+
+It maps ImageNet predictions to 3 labels: "cat", "dog", or "unknown" using keyword matching.
+
+You can easily modify the logic or add more label mappings based on your use case.
+
