@@ -31,7 +31,7 @@ or use requirements.txt
 ### 3. Run the app
 python app.py
 
-The API will be available at:
+The API will be available at your local computer:
 📍 http://127.0.0.1:5000
 
 
